@@ -3,24 +3,32 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { AboutComponent } from './about/about.component';
-import { PhotosComponent } from './photos/photos.component';
-import { ContactComponent } from './contact/contact.component';
+import { SharedModule } from './shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthModule } from './components/auth/auth.module';
+// import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    LoginComponent,
-    AboutComponent,
-    PhotosComponent,
-    ContactComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SharedModule,
+    // ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+    HttpClientModule
+
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
