@@ -8,9 +8,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthModule } from './components/auth/auth.module';
 // import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
 import { HttpClientModule} from '@angular/common/http';
+// import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -25,10 +25,8 @@ import { HttpClientModule} from '@angular/common/http';
     SharedModule,
     // ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    HttpClientModule
-
-    
-    
+    HttpClientModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

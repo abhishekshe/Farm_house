@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as feather from 'feather-icons';
+import { CollaspeService } from '../../services/collaspe.service';
 
 
 @Component({
@@ -9,10 +10,15 @@ import * as feather from 'feather-icons';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  userImage : string = "assets/images/user.png"
+
+  constructor(public _collaspeService: CollaspeService) { }
 
   ngOnInit(): void {
-    feather.replace();
+    
+    }
+    collaspeSidebar() {
+      this._collaspeService.openNav = !this._collaspeService.openNav;
     }
 
 }
